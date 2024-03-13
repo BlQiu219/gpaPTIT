@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>gpaPTIT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="background-container">
+        <div class="line"></div>
+        <div class="container">
+            <div class="button-container">
+                <button id="loginBtn" class="btn" onclick="showLogin()">Đăng nhập</button>
+                <button id="registerBtn" class="btn" onclick="showRegister()">Đăng ký</button>
+            </div>
+            <form id="loginForm" style="display: block;">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email học viện" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder="Mật khẩu " required>
+                </div>
+                <button id="submitLoginBtn" type="submit">Đăng nhập</button>
+            </form>
+            <form id="registerForm" style="display: none;">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Họ và tên" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email học viện" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="studentId" name="studentId" placeholder="Mã sinh viên" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
+                </div>
+                <button id="submitRegisterBtn" type="submit">Đăng ký</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="js/scrip.js" ></script>
+</body>
+</html>

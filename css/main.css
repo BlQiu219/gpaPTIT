@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.line {
+    background-color: rgb(195, 27, 27);
+    width: 100%;
+    padding: 30px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0px 0px 20px 0px;
+    background-color: #ede8e87f;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.background-container {
+    background-image: url('https://chamsockhachang.com/wp-content/uploads/hoc-vien-buu-chinh-vien-thong.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    /* filter: blur(5px); */
+}
+
+
+.button-container {
+    display: flex;
+}
+
+.active {
+    background-color: red;
+}
+
+#loginBtn {
+    padding: 10px;
+    color: white;
+    font-size: 37px;
+    background-color: #C90505;
+    border-radius: 15px 0px 0px 0px;
+    width: 50%;
+    height: 65px;
+    cursor: pointer;
+    border: none;
+}
+
+#loginBtn:hover {
+    background-color: #A41216;
+}
+
+#registerBtn {
+    padding: 10px;
+    color: white;
+    font-size: 37px;
+    background-color: #C90505;
+    border-radius: 0px 15px 0px 0px;
+    width: 50%;
+    height: 65px;
+    cursor: pointer;
+    border: none;
+}
+
+#registerBtn:hover {
+    background-color: #A41216;
+}
+
+.form-group {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+#name {
+    font-size: 25px;
+    padding: 15px;
+    width: 450px;
+    border-radius: 15px;
+    border: 1px solid red; 
+}
+
+#email {
+    font-size: 25px;
+    padding: 15px;
+    width: 450px;
+    border-radius: 15px;
+    border: 1px solid red;
+}
+
+#studentId {
+    font-size: 25px;
+    padding: 15px;
+    width: 450px;
+    border-radius: 15px;
+    border: 1px solid red;
+}
+
+#password {
+    font-size: 25px;
+    padding: 15px ;
+    width: 450px;
+    border-radius: 15px;
+    border: 1px solid red;
+}
+
+#submitLoginBtn {
+    font-size: 25px;
+    color: white;
+    padding: 15px;
+    width: 450px;
+    border-radius: 15px;
+    border: none;
+    background-color: #C90505;
+    cursor: pointer;
+}
+
+#submitLoginBtn:hover {
+    background-color: #A41216;
+}
+
+#submitRegisterBtn {
+    font-size: 25px;
+    color: white;
+    padding: 15px;
+    width: 450px;
+    border-radius: 15px;
+    border: none;
+    background-color: #C90505;
+    cursor: pointer;
+}
+
+#submitRegisterBtn:hover {
+    background-color: #A41216;
+}
