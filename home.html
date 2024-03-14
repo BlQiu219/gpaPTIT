@@ -1,13 +1,1263 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>gpaPTIT</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <div>hehe</div>
+    <div class="header">
+        <div class="headerRight">
+            <button class="buttonForm" id="calculatorButton">Công cụ tính</button>
+            <button class="buttonForm" id="dataEditorButton">Chỉnh sửa</button>
+            <button class="buttonForm" id="statisticalButton">Thống kê</button>
+            <button class="buttonForm" id="targetButton">Mục tiêu</button>
+            <div class="infoUser">
+                <div style="text-align: center;"> user</div>
+                <div> B20DCCN001</div>
+            </div>
+            <img src="https://www.whoseno.com/images/user-icon.png" alt="">
+        </div>
+        
+    </div>
+
+    <div class="containerHome" >
+        <div id="calculator" style="display: none;">
+            <div class="Cal">Công cụ tính</div>
+            <div>
+                <select id="Cal-index" name="Cal-index" aria-placeholder="Hệ số điểm">
+                    <option value="Cal-index1">Hệ số điểm</option>
+                    <option value="Cal-index2">10-10-10-70</option>
+                    <option value="Cal-index3">10-20-70</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="dataEditor" style="display: block;">
+            <h1 class="titleDataEditor">Bảng điểm của bạn</h1>
+
+            <h2 class="titleDataEditorh2">Học kì 1 năm 1</h2>
+            <div class="ki1"  >
+                <div class="ki1-text" style="margin-top: 30px;">
+                    <div class="subk1-mh">Đại số</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="daiso" name="daiso" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="daiso">Điểm hiện tại</option>
+                            <option value="daiso">A+</option>
+                            <option value="daiso">A</option>
+                            <option value="daiso">B+</option>
+                            <option value="daiso">B</option>
+                            <option value="daiso">C+</option>
+                            <option value="daiso">C</option>
+                            <option value="daiso">D+</option>
+                            <option value="daiso">D</option>
+                            <option value="daiso">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Giải tích 1</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="giatich1" name="giatich1" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="giatich1">Điểm hiện tại</option>
+                            <option value="giatich1">A+</option>
+                            <option value="giatich1">A</option>
+                            <option value="giatich1">B+</option>
+                            <option value="giatich1">B</option>
+                            <option value="giatich1">C+</option>
+                            <option value="giatich1">C</option>
+                            <option value="giatich1">D+</option>
+                            <option value="giatich1">D</option>
+                            <option value="giatich1">F</option>
+                        </select>
+                    </div>
+                </div>
+                 
+                <div class="ki1-text">
+                    <div class="subk1-mh">Tin học cơ sở 1</div>
+                    <div class="subk1-tc">2 tín chỉ</div>
+                    <div>
+                        <select id="thcs1" name="thcs1" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="thcs1">Điểm hiện tại</option>
+                            <option value="thcs1">A+</option>
+                            <option value="thcs1">A</option>
+                            <option value="thcs1">B+</option>
+                            <option value="thcs1">B</option>
+                            <option value="thcs1">C+</option>
+                            <option value="thcs1">C</option>
+                            <option value="thcs1">D+</option>
+                            <option value="thcs1">D</option>
+                            <option value="thcs1">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Triết học Mac-Lenin</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="triet" name="triet" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="triet">Điểm hiện tại</option>
+                            <option value="triet">A+</option>
+                            <option value="triet">A</option>
+                            <option value="triet">B+</option>
+                            <option value="triet">B</option>
+                            <option value="triet">C+</option>
+                            <option value="triet">C</option>
+                            <option value="triet">D+</option>
+                            <option value="triet">D</option>
+                            <option value="triet">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text-kq">
+                    <div  style="font-size: 15px;">Điểm trung bình học kì</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+                
+                <div class="ki1-text-kq">
+                    <div  style="font-size: 15px;">Điểm trung bình tích luỹ</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+                <div class="ki1-text-kq">
+                    <div  style="font-size: 15px;">Số tín chỉ đạt</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+
+                <div class="ki1-text-kq" style="margin-bottom: 30px;">
+                    <div  style="font-size: 15px;">Số tín chỉ tích luỹ</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+
+            </div>
+
+
+            <h2 class="titleDataEditorh2">Học kì 2 năm 1</h2>
+            <div class="ki1"  >
+                <div class="ki1-text" style="margin-top: 30px;">
+                    <div class="subk1-mh">Giải tích 2</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="giaitich2" name="giaitich2" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="giaitich2">Điểm hiện tại</option>
+                            <option value="giaitich2">A+</option>
+                            <option value="giaitich2">A</option>
+                            <option value="giaitich2">B+</option>
+                            <option value="giaitich2">B</option>
+                            <option value="giaitich2">C+</option>
+                            <option value="giaitich2">C</option>
+                            <option value="giaitich2">D+</option>
+                            <option value="giaitich2">D</option>
+                            <option value="giaitich2">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Kinh tế chính trị Mac-Lenin</div>
+                    <div class="subk1-tc">2 tín chỉ</div>
+                    <div>
+                        <select id="ktct" name="ktct" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="ktct">Điểm hiện tại</option>
+                            <option value="ktct">A+</option>
+                            <option value="ktct">A</option>
+                            <option value="ktct">B+</option>
+                            <option value="ktct">B</option>
+                            <option value="ktct">C+</option>
+                            <option value="ktct">C</option>
+                            <option value="ktct">D+</option>
+                            <option value="ktct">D</option>
+                            <option value="ktct">F</option>
+                        </select>
+                    </div>
+                </div>
+                 
+                <div class="ki1-text">
+                    <div class="subk1-mh">Kỹ thuật số</div>
+                    <div class="subk1-tc">2 tín chỉ</div>
+                    <div>
+                        <select id="kts" name="kts" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="kts">Điểm hiện tại</option>
+                            <option value="kts">A+</option>
+                            <option value="kts">A</option>
+                            <option value="kts">B+</option>
+                            <option value="kts">B</option>
+                            <option value="kts">C+</option>
+                            <option value="kts">C</option>
+                            <option value="kts">D+</option>
+                            <option value="kts">D</option>
+                            <option value="kts">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Tiếng anh(course 1)</div>
+                    <div class="subk1-tc">4 tín chỉ</div>
+                    <div>
+                        <select id="anh1" name="anh1" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="anh1">Điểm hiện tại</option>
+                            <option value="anh1">A+</option>
+                            <option value="anh1">A</option>
+                            <option value="anh1">B+</option>
+                            <option value="anh1">B</option>
+                            <option value="anh1">C+</option>
+                            <option value="anh1">C</option>
+                            <option value="anh1">D+</option>
+                            <option value="anh1">D</option>
+                            <option value="anh1">F</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ki1-text">
+                    <div class="subk1-mh">Tin học cơ sở 2</div>
+                    <div class="subk1-tc">2 tín chỉ</div>
+                    <div>
+                        <select id="thcs2" name="thcs2" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="thcs2">Điểm hiện tại</option>
+                            <option value="thcs2">A+</option>
+                            <option value="thcs2">A</option>
+                            <option value="thcs2">B+</option>
+                            <option value="thcs2">B</option>
+                            <option value="thcs2">C+</option>
+                            <option value="thcs2">C</option>
+                            <option value="thcs2">D+</option>
+                            <option value="thcs2">D</option>
+                            <option value="thcs2">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Vật lý và thí nghiệm 1</div>
+                    <div class="subk1-tc">4 tín chỉ</div>
+                    <div>
+                        <select id="vl1" name="vl1" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="vl1">Điểm hiện tại</option>
+                            <option value="vl1">A+</option>
+                            <option value="vl1">A</option>
+                            <option value="vl1">B+</option>
+                            <option value="vl1">B</option>
+                            <option value="vl1">C+</option>
+                            <option value="vl1">C</option>
+                            <option value="vl1">D+</option>
+                            <option value="vl1">D</option>
+                            <option value="vl1">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Xác suất thống kê</div>
+                    <div class="subk1-tc">2 tín chỉ</div>
+                    <div>
+                        <select id="xstk" name="xstk" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="xstk">Điểm hiện tại</option>
+                            <option value="xstk">A+</option>
+                            <option value="xstk">A</option>
+                            <option value="xstk">B+</option>
+                            <option value="xstk">B</option>
+                            <option value="xstk">C+</option>
+                            <option value="xstk">C</option>
+                            <option value="xstk">D+</option>
+                            <option value="xstk">D</option>
+                            <option value="xstk">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+
+                <div class="ki1-text-kq">
+                    <div  style="font-size: 15px;">Điểm trung bình học kì</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+                
+                <div class="ki1-text-kq">
+                    <div  style="font-size: 15px;">Điểm trung bình tích luỹ</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+                <div class="ki1-text-kq">
+                    <div  style="font-size: 15px;">Số tín chỉ đạt</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+
+                <div class="ki1-text-kq" style="margin-bottom: 30px;">
+                    <div  style="font-size: 15px;">Số tín chỉ tích luỹ</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+
+            </div>
+
+            <h2 class="titleDataEditorh2">Học kì 1 năm 2</h2>
+            <div class="ki1"  >
+                <div class="ki1-text" style="margin-top: 30px;">
+                    <div class="subk1-mh">Chủ nghĩa xã hội khoa học </div>
+                    <div class="subk1-tc">2 tín chỉ</div>
+                    <div>
+                        <select id="cnxh" name="cnxh" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="cnxh">Điểm hiện tại</option>
+                            <option value="cnxh">A+</option>
+                            <option value="cnxh">A</option>
+                            <option value="cnxh">B+</option>
+                            <option value="cnxh">B</option>
+                            <option value="cnxh">C+</option>
+                            <option value="cnxh">C</option>
+                            <option value="cnxh">D+</option>
+                            <option value="cnxh">D</option>
+                            <option value="cnxh">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Ngôn ngữ lập trình C++</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="cpp" name="cpp" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="cpp">Điểm hiện tại</option>
+                            <option value="cpp">A+</option>
+                            <option value="cpp">A</option>
+                            <option value="cpp">B+</option>
+                            <option value="cpp">B</option>
+                            <option value="cpp">C+</option>
+                            <option value="cpp">C</option>
+                            <option value="cpp">D+</option>
+                            <option value="cpp">D</option>
+                            <option value="cpp">F</option>
+                        </select>
+                    </div>
+                </div>
+                 
+                <div class="ki1-text">
+                    <div class="subk1-mh">Tiếng anh(course 2)</div>
+                    <div class="subk1-tc">4 tín chỉ</div>
+                    <div>
+                        <select id="anh2" name="anh2" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="anh2">Điểm hiện tại</option>
+                            <option value="anh2">A+</option>
+                            <option value="anh2">A</option>
+                            <option value="anh2">B+</option>
+                            <option value="anh2">B</option>
+                            <option value="anh2">C+</option>
+                            <option value="anh2">C</option>
+                            <option value="anh2">D+</option>
+                            <option value="anh2">D</option>
+                            <option value="anh2">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Toán rời rạc 2</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="trr" name="trr" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="trr">Điểm hiện tại</option>
+                            <option value="trr">A+</option>
+                            <option value="trr">A</option>
+                            <option value="trr">B+</option>
+                            <option value="trr">B</option>
+                            <option value="trr">C+</option>
+                            <option value="trr">C</option>
+                            <option value="trr">D+</option>
+                            <option value="trr">D</option>
+                            <option value="trr">F</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ki1-text">
+                    <div class="subk1-mh">Vật lí và thí nghiệm 3</div>
+                    <div class="subk1-tc">4 tín chỉ</div>
+                    <div>
+                        <select id="vl2" name="vl2" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="vl2">Điểm hiện tại</option>
+                            <option value="vl2">A+</option>
+                            <option value="vl2">A</option>
+                            <option value="vl2">B+</option>
+                            <option value="vl2">B</option>
+                            <option value="vl2">C+</option>
+                            <option value="vl2">C</option>
+                            <option value="vl2">D+</option>
+                            <option value="vl2">D</option>
+                            <option value="vl2">F</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ki1-text">
+                    <div class="subk1-mh">Xử lí tín hiệu số</div>
+                    <div class="subk1-tc">2 tín chỉ</div>
+                    <div>
+                        <select id="xlth" name="xlth" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="xlth">Điểm hiện tại</option>
+                            <option value="xlth">A+</option>
+                            <option value="xlth">A</option>
+                            <option value="xlth">B+</option>
+                            <option value="xlth">B</option>
+                            <option value="xlth">C+</option>
+                            <option value="xlth">C</option>
+                            <option value="xlth">D+</option>
+                            <option value="xlth">D</option>
+                            <option value="xlth">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text-kq">
+                    <div  style="font-size: 15px;">Điểm trung bình học kì</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+                
+                <div class="ki1-text-kq">
+                    <div  style="font-size: 15px;">Điểm trung bình tích luỹ</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+                <div class="ki1-text-kq">
+                    <div  style="font-size: 15px;">Số tín chỉ đạt</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+
+                <div class="ki1-text-kq" style="margin-bottom: 30px;">
+                    <div  style="font-size: 15px;">Số tín chỉ tích luỹ</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+            </div>
+
+            <h2 class="titleDataEditorh2">Học kì 2 năm 2</h2>
+            <div class="ki1"  >
+                <div class="ki1-text" style="margin-top: 30px;">
+                    <div class="subk1-mh">Cấu trúc dữ liệu và giải thuật</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="ctdlgt" name="ctdlgt" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="ctdlgt">Điểm hiện tại</option>
+                            <option value="ctdlgt">A+</option>
+                            <option value="ctdlgt">A</option>
+                            <option value="ctdlgt">B+</option>
+                            <option value="ctdlgt">B</option>
+                            <option value="ctdlgt">C+</option>
+                            <option value="ctdlgt">C</option>
+                            <option value="ctdlgt">D+</option>
+                            <option value="ctdlgt">D</option>
+                            <option value="ctdlgt">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Kiến trúc máy tính</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="ktmt" name="ktmt" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="ktmt">Điểm hiện tại</option>
+                            <option value="ktmt">A+</option>
+                            <option value="ktmt">A</option>
+                            <option value="ktmt">B+</option>
+                            <option value="ktmt">B</option>
+                            <option value="ktmt">C+</option>
+                            <option value="ktmt">C</option>
+                            <option value="ktmt">D+</option>
+                            <option value="ktmt">D</option>
+                            <option value="ktmt">F</option>
+                        </select>
+                    </div>
+                </div>
+                 
+                <div class="ki1-text">
+                    <div class="subk1-mh">Lý thuyết thông tin</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="lttt" name="lttt" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="lttt">Điểm hiện tại</option>
+                            <option value="lttt">A+</option>
+                            <option value="lttt">A</option>
+                            <option value="lttt">B+</option>
+                            <option value="lttt">B</option>
+                            <option value="lttt">C+</option>
+                            <option value="lttt">C</option>
+                            <option value="lttt">D+</option>
+                            <option value="lttt">D</option>
+                            <option value="lttt">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Tiếng anh(course 3)</div>
+                    <div class="subk1-tc">4 tín chỉ</div>
+                    <div>
+                        <select id="anh3" name="anh3" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="anh3">Điểm hiện tại</option>
+                            <option value="anh3">A+</option>
+                            <option value="anh3">A</option>
+                            <option value="anh3">B+</option>
+                            <option value="anh3">B</option>
+                            <option value="anh3">C+</option>
+                            <option value="anh3">C</option>
+                            <option value="anh3">D+</option>
+                            <option value="anh3">D</option>
+                            <option value="anh3">F</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ki1-text">
+                    <div class="subk1-mh">Toán rời rạc 2 </div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="trr2" name="trr2" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="trr2">Điểm hiện tại</option>
+                            <option value="trr2">A+</option>
+                            <option value="trr2">A</option>
+                            <option value="trr2">B+</option>
+                            <option value="trr2">B</option>
+                            <option value="trr2">C+</option>
+                            <option value="trr2">C</option>
+                            <option value="trr2">D+</option>
+                            <option value="trr2">D</option>
+                            <option value="trr2">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Tư tưởng Hồ Chí Minh</div>
+                    <div class="subk1-tc">2 tín chỉ</div>
+                    <div>
+                        <select id="tthcm" name="tthcm" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="tthcm">Điểm hiện tại</option>
+                            <option value="tthcm">A+</option>
+                            <option value="tthcm">A</option>
+                            <option value="tthcm">B+</option>
+                            <option value="tthcm">B</option>
+                            <option value="tthcm">C+</option>
+                            <option value="tthcm">C</option>
+                            <option value="tthcm">D+</option>
+                            <option value="tthcm">D</option>
+                            <option value="tthcm">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text-kq">
+                    <div  style="font-size: 15px;">Điểm trung bình học kì</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+                
+                <div class="ki1-text-kq">
+                    <div  style="font-size: 15px;">Điểm trung bình tích luỹ</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+                <div class="ki1-text-kq">
+                    <div  style="font-size: 15px;">Số tín chỉ đạt</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+
+                <div class="ki1-text-kq" style="margin-bottom: 30px;">
+                    <div  style="font-size: 15px;">Số tín chỉ tích luỹ</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+
+            </div>
+
+            <h2 class="titleDataEditorh2">Học kì 1 năm 3</h2>
+            <div class="ki1">
+                <div class="ki1-text" style="margin-top: 30px;">
+                    <div class="subk1-mh">Cơ sở dữ liệu</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="csdl" name="csdl" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="csdl">Điểm hiện tại</option>
+                            <option value="csdl">A+</option>
+                            <option value="csdl">A</option>
+                            <option value="csdl">B+</option>
+                            <option value="csdl">B</option>
+                            <option value="csdl">C+</option>
+                            <option value="csdl">C</option>
+                            <option value="csdl">D+</option>
+                            <option value="csdl">D</option>
+                            <option value="csdl">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Hệ điều hành</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="hdh" name="hdh" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="hdh">Điểm hiện tại</option>
+                            <option value="hdh">A+</option>
+                            <option value="hdh">A</option>
+                            <option value="hdh">B+</option>
+                            <option value="hdh">B</option>
+                            <option value="hdh">C+</option>
+                            <option value="hdh">C</option>
+                            <option value="hdh">D+</option>
+                            <option value="hdh">D</option>
+                            <option value="hdh">F</option>
+                        </select>
+                    </div>
+                </div>
+                 
+                <div class="ki1-text">
+                    <div class="subk1-mh">Lập trình hướng đối tượng</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="oop" name="oop" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="oop">Điểm hiện tại</option>
+                            <option value="oop">A+</option>
+                            <option value="oop">A</option>
+                            <option value="oop">B+</option>
+                            <option value="oop">B</option>
+                            <option value="oop">C+</option>
+                            <option value="oop">C</option>
+                            <option value="oop">D+</option>
+                            <option value="oop">D</option>
+                            <option value="oop">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Lập trình với Python</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="py" name="py" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="py">Điểm hiện tại</option>
+                            <option value="py">A+</option>
+                            <option value="py">A</option>
+                            <option value="py">B+</option>
+                            <option value="py">B</option>
+                            <option value="py">C+</option>
+                            <option value="py">C</option>
+                            <option value="py">D+</option>
+                            <option value="py">D</option>
+                            <option value="py">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Lịch sử đảng</div>
+                    <div class="subk1-tc">2 tín chỉ</div>
+                    <div>
+                        <select id="lsd" name="lsd" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="lsd">Điểm hiện tại</option>
+                            <option value="lsd">A+</option>
+                            <option value="lsd">A</option>
+                            <option value="lsd">B+</option>
+                            <option value="lsd">B</option>
+                            <option value="lsd">C+</option>
+                            <option value="lsd">C</option>
+                            <option value="lsd">D+</option>
+                            <option value="lsd">D</option>
+                            <option value="lsd">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Mạng máy tính</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="mmt" name="mmt" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="mmt">Điểm hiện tại</option>
+                            <option value="mmt">A+</option>
+                            <option value="mmt">A</option>
+                            <option value="mmt">B+</option>
+                            <option value="mmt">B</option>
+                            <option value="mmt">C+</option>
+                            <option value="mmt">C</option>
+                            <option value="mmt">D+</option>
+                            <option value="mmt">D</option>
+                            <option value="mmt">F</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ki1-text">
+                    <div class="subk1-mh">Tiếng Anh (course 4)</div>
+                    <div class="subk1-tc">2 tín chỉ</div>
+                    <div>
+                        <select id="anh4" name="anh4" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="anh4">Điểm hiện tại</option>
+                            <option value="anh4">A+</option>
+                            <option value="anh4">A</option>
+                            <option value="anh4">B+</option>
+                            <option value="anh4">B</option>
+                            <option value="anh4">C+</option>
+                            <option value="anh4">C</option>
+                            <option value="anh4">D+</option>
+                            <option value="anh4">D</option>
+                            <option value="anh4">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Điểm trung bình học kì</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+                
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Điểm trung bình tích luỹ</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Số tín chỉ đạt</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+            
+                <div class="ki1-text-kq" style="margin-bottom: 30px;">
+                    <div style="font-size: 15px;">Số tín chỉ tích luỹ</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+            
+            </div>
+            
+
+            <h2 class="titleDataEditorh2">Học kì 3 năm 3</h2>
+            <div class="ki1">
+                <div class="ki1-text" style="margin-top: 30px;">
+                    <div class="subk1-mh">An toàn và bảo mật thông tin </div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="atbm" name="atbm" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="atbm">Điểm hiện tại</option>
+                            <option value="atbm">A+</option>
+                            <option value="atbm">A</option>
+                            <option value="atbm">B+</option>
+                            <option value="atbm">B</option>
+                            <option value="atbm">C+</option>
+                            <option value="atbm">C</option>
+                            <option value="atbm">D+</option>
+                            <option value="atbm">D</option>
+                            <option value="atbm">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Cơ sở dữ liệu phân tán</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="csdlpt" name="csdlpt" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="csdlpt">Điểm hiện tại</option>
+                            <option value="csdlpt">A+</option>
+                            <option value="csdlpt">A</option>
+                            <option value="csdlpt">B+</option>
+                            <option value="csdlpt">B</option>
+                            <option value="csdlpt">C+</option>
+                            <option value="csdlpt">C</option>
+                            <option value="csdlpt">D+</option>
+                            <option value="csdlpt">D</option>
+                            <option value="csdlpt">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Lập trình web</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="web" name="web" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="web">Điểm hiện tại</option>
+                            <option value="web">A+</option>
+                            <option value="web">A</option>
+                            <option value="web">B+</option>
+                            <option value="web">B</option>
+                            <option value="web">C+</option>
+                            <option value="web">C</option>
+                            <option value="web">D+</option>
+                            <option value="web">D</option>
+                            <option value="web">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Nhập môn công nghệ phần mềm </div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="nmcnpm" name="nmcnpm" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="nmcnpm">Điểm hiện tại</option>
+                            <option value="nmcnpm">A+</option>
+                            <option value="nmcnpm">A</option>
+                            <option value="nmcnpm">B+</option>
+                            <option value="nmcnpm">B</option>
+                            <option value="nmcnpm">C+</option>
+                            <option value="nmcnpm">C</option>
+                            <option value="nmcnpm">D+</option>
+                            <option value="nmcnpm">D</option>
+                            <option value="nmcnpm">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Nhập môn trí tuệ nhân tạo</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="nmttnt" name="nmttnt" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="nmttnt">Điểm hiện tại</option>
+                            <option value="nmttnt">A+</option>
+                            <option value="nmttnt">A</option>
+                            <option value="nmttnt">B+</option>
+                            <option value="nmttnt">B</option>
+                            <option value="nmttnt">C+</option>
+                            <option value="nmttnt">C</option>
+                            <option value="nmttnt">D+</option>
+                            <option value="nmttnt">D</option>
+                            <option value="nmttnt">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Thực tập cơ cở</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="ttcs" name="ttcs" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="ttcs">Điểm hiện tại</option>
+                            <option value="ttcs">A+</option>
+                            <option value="ttcs">A</option>
+                            <option value="ttcs">B+</option>
+                            <option value="ttcs">B</option>
+                            <option value="ttcs">C+</option>
+                            <option value="ttcs">C</option>
+                            <option value="ttcs">D+</option>
+                            <option value="ttcs">D</option>
+                            <option value="ttcs">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Điểm trung bình học kì</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+            
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Điểm trung bình tích luỹ</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Số tín chỉ đạt</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+            
+                <div class="ki1-text-kq" style="margin-bottom: 30px;">
+                    <div style="font-size: 15px;">Số tín chỉ tích luỹ</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+            
+            </div>
+            
+
+            <h2 class="titleDataEditorh2">Học kì 1 năm 4</h2>
+            <div class="ki1">
+                <div class="ki1-text" style="margin-top: 30px;">
+                    <div class="subk1-mh">Iot và ứng dụng </div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="iotvud" name="iotvud" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="iotvud">Điểm hiện tại</option>
+                            <option value="iotvud">A+</option>
+                            <option value="iotvud">A</option>
+                            <option value="iotvud">B+</option>
+                            <option value="iotvud">B</option>
+                            <option value="iotvud">C+</option>
+                            <option value="iotvud">C</option>
+                            <option value="iotvud">D+</option>
+                            <option value="iotvud">D</option>
+                            <option value="iotvud">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Phát triển các hệ thống thông minh</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="ptchttm" name="ptchttm" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="ptchttm">Điểm hiện tại</option>
+                            <option value="ptchttm">A+</option>
+                            <option value="ptchttm">A</option>
+                            <option value="ptchttm">B+</option>
+                            <option value="ptchttm">B</option>
+                            <option value="ptchttm">C+</option>
+                            <option value="ptchttm">C</option>
+                            <option value="ptchttm">D+</option>
+                            <option value="ptchttm">D</option>
+                            <option value="ptchttm">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Phân tích và thiết kế hệ thống thông tin</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="ptvtkhttt" name="ptvtkhttt" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="ptvtkhttt">Điểm hiện tại</option>
+                            <option value="ptvtkhttt">A+</option>
+                            <option value="ptvtkhttt">A</option>
+                            <option value="ptvtkhttt">B+</option>
+                            <option value="ptvtkhttt">B</option>
+                            <option value="ptvtkhttt">C+</option>
+                            <option value="ptvtkhttt">C</option>
+                            <option value="ptvtkhttt">D+</option>
+                            <option value="ptvtkhttt">D</option>
+                            <option value="ptvtkhttt">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Phương pháp luận nghiên cứu khoa học</div>
+                    <div class="subk1-tc">2 tín chỉ</div>
+                    <div>
+                        <select id="pplnckh" name="pplnckh" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="pplnckh">Điểm hiện tại</option>
+                            <option value="pplnckh">A+</option>
+                            <option value="pplnckh">A</option>
+                            <option value="pplnckh">B+</option>
+                            <option value="pplnckh">B</option>
+                            <option value="pplnckh">C+</option>
+                            <option value="pplnckh">C</option>
+                            <option value="pplnckh">D+</option>
+                            <option value="pplnckh">D</option>
+                            <option value="pplnckh">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Quản lý dự án phần mềm</div>
+                    <div class="subk1-tc">2 tín chỉ</div>
+                    <div>
+                        <select id="qldapm" name="qldapm" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="qldapm">Điểm hiện tại</option>
+                            <option value="qldapm">A+</option>
+                            <option value="qldapm">A</option>
+                            <option value="qldapm">B+</option>
+                            <option value="qldapm">B</option>
+                            <option value="qldapm">C+</option>
+                            <option value="qldapm">C</option>
+                            <option value="qldapm">D+</option>
+                            <option value="qldapm">D</option>
+                            <option value="qldapm">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Xử lý ảnh</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="xla" name="xla" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="xla">Điểm hiện tại</option>
+                            <option value="xla">A+</option>
+                            <option value="xla">A</option>
+                            <option value="xla">B+</option>
+                            <option value="xla">B</option>
+                            <option value="xla">C+</option>
+                            <option value="xla">C</option>
+                            <option value="xla">D+</option>
+                            <option value="xla">D</option>
+                            <option value="xla">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Học phần tự chọn</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="hptc" name="hptc" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="hptc">Điểm hiện tại</option>
+                            <option value="hptc">A+</option>
+                            <option value="hptc">A</option>
+                            <option value="hptc">B+</option>
+                            <option value="hptc">B</option>
+                            <option value="hptc">C+</option>
+                            <option value="hptc">C</option>
+                            <option value="hptc">D+</option>
+                            <option value="hptc">D</option>
+                            <option value="hptc">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+            
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Điểm trung bình học kì</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+            
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Điểm trung bình tích luỹ</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Số tín chỉ đạt</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+            
+                <div class="ki1-text-kq" style="margin-bottom: 30px;">
+                    <div style="font-size: 15px;">Số tín chỉ tích luỹ</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+            
+            </div>
+            
+            
+
+            <h2 class="titleDataEditorh2">Học kì 2 năm 4</h2>
+            <div class="ki1">
+                <div class="ki1-text" style="margin-top: 30px;">
+                    <div class="subk1-mh">Chuyên đề công nghệ phần mềm</div>
+                    <div class="subk1-tc">1 tín chỉ</div>
+                    <div>
+                        <select id="cccnpm" name="cccnpm" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="cccnpm">Điểm hiện tại</option>
+                            <option value="cccnpm">A+</option>
+                            <option value="cccnpm">A</option>
+                            <option value="cccnpm">B+</option>
+                            <option value="cccnpm">B</option>
+                            <option value="cccnpm">C+</option>
+                            <option value="cccnpm">C</option>
+                            <option value="cccnpm">D+</option>
+                            <option value="cccnpm">D</option>
+                            <option value="cccnpm">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Đảm bảo chất lượng phần mềm</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="dbclpm" name="dbclpm" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="dbclpm">Điểm hiện tại</option>
+                            <option value="dbclpm">A+</option>
+                            <option value="dbclpm">A</option>
+                            <option value="dbclpm">B+</option>
+                            <option value="dbclpm">B</option>
+                            <option value="dbclpm">C+</option>
+                            <option value="dbclpm">C</option>
+                            <option value="dbclpm">D+</option>
+                            <option value="dbclpm">D</option>
+                            <option value="dbclpm">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Kiến trúc và thiết kế phần mềm</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="ktvtkpm" name="ktvtkpm" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="ktvtkpm">Điểm hiện tại</option>
+                            <option value="ktvtkpm">A+</option>
+                            <option value="ktvtkpm">A</option>
+                            <option value="ktvtkpm">B+</option>
+                            <option value="ktvtkpm">B</option>
+                            <option value="ktvtkpm">C+</option>
+                            <option value="ktvtkpm">C</option>
+                            <option value="ktvtkpm">D+</option>
+                            <option value="ktvtkpm">D</option>
+                            <option value="ktvtkpm">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Phát triển phần mềm hướng dịch vụ</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="ptpmdv" name="ptpmdv" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="ptpmdv">Điểm hiện tại</option>
+                            <option value="ptpmdv">A+</option>
+                            <option value="ptpmdv">A</option>
+                            <option value="ptpmdv">B+</option>
+                            <option value="ptpmdv">B</option>
+                            <option value="ptpmdv">C+</option>
+                            <option value="ptpmdv">C</option>
+                            <option value="ptpmdv">D+</option>
+                            <option value="ptpmdv">D</option>
+                            <option value="ptpmdv">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Phát triển ứng dụng cho các thiết bị di động </div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="ptudcctbdd" name="ptudcctbdd" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="ptudcctbdd">Điểm hiện tại</option>
+                            <option value="ptudcctbdd">A+</option>
+                            <option value="ptudcctbdd">A</option>
+                            <option value="ptudcctbdd">B+</option>
+                            <option value="ptudcctbdd">B</option>
+                            <option value="ptudcctbdd">C+</option>
+                            <option value="ptudcctbdd">C</option>
+                            <option value="ptudcctbdd">D+</option>
+                            <option value="ptudcctbdd">D</option>
+                            <option value="ptudcctbdd">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text">
+                    <div class="subk1-mh">Xây dựng các hệ thống nhúng</div>
+                    <div class="subk1-tc">3 tín chỉ</div>
+                    <div>
+                        <select id="xdchtn" name="xdchtn" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="xdchtn">Điểm hiện tại</option>
+                            <option value="xdchtn">A+</option>
+                            <option value="xdchtn">A</option>
+                            <option value="xdchtn">B+</option>
+                            <option value="xdchtn">B</option>
+                            <option value="xdchtn">C+</option>
+                            <option value="xdchtn">C</option>
+                            <option value="xdchtn">D+</option>
+                            <option value="xdchtn">D</option>
+                            <option value="xdchtn">F</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Điểm trung bình học kì</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+            
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Điểm trung bình tích luỹ</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+            
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Số tín chỉ đạt</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+            
+                <div class="ki1-text-kq" style="margin-bottom: 30px;">
+                    <div style="font-size: 15px;">Số tín chỉ tích luỹ</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+            
+            </div>
+            
+
+            <h2 class="titleDataEditorh2">Kì thực tập</h2>
+            <div class="ki1">
+                <div class="ki1-text" style="margin-top: 30px;">
+                    <div class="subk1-mh">Thực tập</div>
+                    <div class="subk1-tc">6 tín chỉ</div>
+                    <div>
+                        <select id="tt" name="tt" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="tt">Điểm hiện tại</option>
+                            <option value="tt">A+</option>
+                            <option value="tt">A</option>
+                            <option value="tt">B+</option>
+                            <option value="tt">B</option>
+                            <option value="tt">C+</option>
+                            <option value="tt">C</option>
+                            <option value="tt">D+</option>
+                            <option value="tt">D</option>
+                            <option value="tt">F</option>
+                        </select>
+                        
+                    </div>
+                </div>
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Điểm trung bình học kì</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+            
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Điểm trung bình tích luỹ</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+            
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Số tín chỉ đạt</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+            
+                <div class="ki1-text-kq" style="margin-bottom: 30px;">
+                    <div style="font-size: 15px;">Số tín chỉ tích luỹ</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+            </div>
+
+            <h2 class="titleDataEditorh2">Khoá luận tốt nghiệp</h2>
+            <div class="ki1">
+                <div class="ki1-text" style="margin-top: 30px;">
+                    <div class="subk1-mh">Khoá luận</div>
+                    <div class="subk1-tc">6 tín chỉ</div>
+                    <div>
+                        <select id="kl" name="kl" aria-placeholder="Điểm hiện tại" style="font-size: 20px;">
+                            <option value="kl">Điểm hiện tại</option>
+                            <option value="kl">A+</option>
+                            <option value="kl">A</option>
+                            <option value="kl">B+</option>
+                            <option value="kl">B</option>
+                            <option value="kl">C+</option>
+                            <option value="kl">C</option>
+                            <option value="kl">D+</option>
+                            <option value="kl">D</option>
+                            <option value="kl">F</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Điểm trung bình học kì</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+            
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Điểm trung bình tích luỹ</div>
+                    <div class="subk1-tc">Thiếu dữ liệu</div>
+                </div>
+            
+                <div class="ki1-text-kq">
+                    <div style="font-size: 15px;">Số tín chỉ đạt</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+            
+                <div class="ki1-text-kq" style="margin-bottom: 30px;">
+                    <div style="font-size: 15px;">Số tín chỉ tích luỹ</div>
+                    <div class="subk1-tc">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footerLeft">
+                <div class="text" > Thông tin điểm tích luỹ </div>
+                <div class="text">Điểm trung bình tích luỹ</div>
+                <div class="text">Số tín chỉ tích luỹ </div>
+        </div>
+        <div class="footerRight">
+            <button class="buttonForm" id="submitProfile">Lưu hồ sơ</button>
+        </div>
+    </div>
+    
+    <script src="js/home.js"></script>
 </body>
 </html>

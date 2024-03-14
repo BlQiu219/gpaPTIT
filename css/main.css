@@ -89,7 +89,7 @@ body {
     border: 1px solid red; 
 }
 
-#email {
+#loginEmail {
     font-size: 25px;
     padding: 15px;
     width: 450px;
@@ -105,9 +105,25 @@ body {
     border: 1px solid red;
 }
 
-#password {
+#loginPassword {
     font-size: 25px;
     padding: 15px ;
+    width: 450px;
+    border-radius: 15px;
+    border: 1px solid red;
+}
+
+#registerPassword {
+    font-size: 25px;
+    padding: 15px ;
+    width: 450px;
+    border-radius: 15px;
+    border: 1px solid red;
+}
+
+#registerEmail {
+    font-size: 25px;
+    padding: 15px;
     width: 450px;
     border-radius: 15px;
     border: 1px solid red;
@@ -140,5 +156,60 @@ body {
 }
 
 #submitRegisterBtn:hover {
+    background-color: #A41216;
+}
+
+
+.createProfile {
+    padding: 15px 5px 0px 5px;
+    color: white;
+    font-size: 37px;
+    background-color: #C90505;
+    border-radius: 15px 15px 0px 0px;
+    max-width: 600px;
+    height: 65px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+#course {
+    font-size: 25px;
+    padding: 10px;
+    width: 450px;
+    border-radius: 15px;
+    border: 1px solid red;
+    margin-bottom: 30px;
+}
+
+#major {
+    font-size: 25px;
+    padding: 10px;
+    width: 450px;
+    border-radius: 15px;
+    border: 1px solid red;
+    margin-bottom: 30px;
+}
+
+#specialization {
+    font-size: 25px;
+    padding: 10px;
+    width: 450px;
+    border-radius: 15px;
+    border: 1px solid red;
+    margin-bottom: 30px;
+}
+
+#submitCreateProfile {
+    font-size: 25px;
+    color: white;
+    padding: 15px;
+    width: 450px;
+    border-radius: 15px;
+    border: none;
+    background-color: #C90505;
+    cursor: pointer;
+}
+
+#submitCreateProfile:hover {
     background-color: #A41216;
 }

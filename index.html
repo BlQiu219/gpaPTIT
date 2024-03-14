@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>gpaPTIT</title>
     <meta charset="UTF-8">
@@ -15,34 +15,58 @@
                 <button id="loginBtn" class="btn" onclick="showLogin()">Đăng nhập</button>
                 <button id="registerBtn" class="btn" onclick="showRegister()">Đăng ký</button>
             </div>
-            <form id="loginForm" style="display: block;">
+            <form id="loginForm" style="display: block;" onsubmit="return validateForm(this)">
                 <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Email học viện" required>
+                    <input type="email" id="loginEmail" name="loginEmail" placeholder="Email" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" name="password" placeholder="Mật khẩu " required>
+                    <input type="password" id="loginPassword" name="loginPassword" placeholder="Mật khẩu " required>
                 </div>
                 <button id="submitLoginBtn" type="submit">Đăng nhập</button>
             </form>
-            <form id="registerForm" style="display: none;">
+            <form id="registerForm" style="display: none;" onsubmit="return validateFormRe()">
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder="Họ và tên" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Email học viện" required>
+                    <input type="email" id="registerEmail" name="registerEmail" placeholder="Email" required>
                 </div>
                 <div class="form-group">
                     <input type="text" id="studentId" name="studentId" placeholder="Mã sinh viên" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
+                    <input type="password" id="registerPassword" name="password" placeholder="Mật khẩu" required>
                 </div>
                 <button id="submitRegisterBtn" type="submit">Đăng ký</button>
             </form>
+            <div id="courseSelection" style="display: none;">
+                <div class="createProfile">Tạo hồ sơ </div>
+                <div>
+                    <select id="course" name="course" placeholder="Khoá học">
+                        <option value="course1">Khoá học</option>
+                        <option value="course2">D20</option>
+                        <option value="course3">D21</option>
+                        <option value="course4">D22</option>
+                        <option value="course5">D23</option>
+                    </select>
+                </div>
+                <div>
+                    <select id="major" name="major" aria-placeholder="Ngành học">
+                        <option value="major1">Ngành học</option>
+                        <option value="major2">Công nghệ thông tin</option>
+                    </select>
+                </div>
+                <div>
+                    <select id="specialization" name="specialization" placeholder="Chuyên ngành">
+                        <option value="specialization1">Chuyên ngành </option>
+                        <option value="specialization2">Hệ thống thông tin</option>
+                        <option value="specialization3">Công nghệ phần mềm</option>
+                    </select>
+                </div>
+                <button type="button" id="submitCreateProfile">Hoàn thành</button>
+            </div>
         </div>
     </div>
-
-    
     <script src="js/scrip.js" ></script>
 </body>
 </html>
