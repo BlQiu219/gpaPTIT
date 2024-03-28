@@ -28,12 +28,46 @@
         <div id="calculator" style="display: none;">
             <div class="Cal">Công cụ tính</div>
             <div>
-                <select id="Cal-index" name="Cal-index" aria-placeholder="Hệ số điểm">
-                    <option value="Cal-index1">Hệ số điểm</option>
-                    <option value="Cal-index2">10-10-10-70</option>
-                    <option value="Cal-index3">10-20-70</option>
+                <select id="Cal-index" name="Cal-index" aria-placeholder="Hệ số điểm" onchange="showTable()">
+                    <option value="default">Chọn hệ số điểm</option>
+                    <option value="10-10-10-70">10-10-10-70</option>
+                    <option value="10-20-70">10-20-70</option>
                 </select>
             </div>
+            <div class="tableCal">
+                <table id="cal10-10-10-70" style="display: none; align-items: center;justify-content: center;">
+                <tr>
+                    <th>Hệ số 10%</th>
+                    <th>Hệ số 10%</th>
+                    <th>Hệ số 10%</th>
+                    <th>Hệ số 70%</th>
+                    <th>Tổng điểm</th>
+                </tr>
+                <tr>
+                    <td><input type="number" id="heSo1ForCal1" name="heSo1ForCal1" value="0" oninput="calculateCal1()"></td>
+                    <td><input type="number" id="heSo2ForCal1" name="heSo2ForCal1" value="0" oninput="calculateCal1()"></td>
+                    <td><input type="number" id="heSo3ForCal1" name="heSo3ForCal1" value="0" oninput="calculateCal1()"></td>
+                    <td><input type="number" id="heSo4ForCal1" name="heSo4ForCal1" value="0" oninput="calculateCal1()"></td>
+                    <td><p id="resultCal1"></p></td>
+                </tr>
+            </table>
+
+            <table id="cal10-20-70" style="display: none;">
+                <tr>
+                    <th>Hệ số 10%</th>
+                    <th>Hệ số 20%</th>
+                    <th>Hệ số 70%</th>
+                    <th>Tổng điểm</th>
+                </tr>
+                <tr>
+                    <td><input type="number" id="heSo1ForCal2" name="heSo1ForCal2" value="0" oninput="calculateCal2()"></td>
+                    <td><input type="number" id="heSo2ForCal2" name="heSo2ForCal2" value="0" oninput="calculateCal2()"></td>
+                    <td><input type="number" id="heSo3ForCal2" name="heSo3ForCal2" value="0" oninput="calculateCal2()"></td>
+                    <td><p id="resultCal2"></p></td>
+                </tr>
+            </table>
+            </div>
+            
         </div>
         
         <div id="dataEditor" style="display: block;">

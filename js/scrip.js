@@ -29,18 +29,44 @@ function validateFormRe() {
     var name = document.getElementById("name").value;
     var registerEmail = document.getElementById("registerEmail").value;
     var studentId = document.getElementById("studentId").value;
-    var password = document.getElementById("Registerpassword").value;
+    var password = document.getElementById("registerPassword").value;
 
+    // Kiểm tra tên không chứa số
+    if (/\d/.test(name)) {
+        alert("Tên không được chứa số. Vui lòng nhập lại.");
+        document.getElementById("name").value = ""; // Xóa giá trị đã nhập
+        document.getElementById("name").focus(); // Đưa con trỏ vào ô nhập tên
+        return false;
+    }
+
+    // Kiểm tra email đúng định dạng
+    if (!validateEmail(registerEmail)) {
+        alert("Email không đúng định dạng. Vui lòng nhập lại.");
+        document.getElementById("registerEmail").value = ""; // Xóa giá trị đã nhập
+        document.getElementById("registerEmail").focus(); // Đưa con trỏ vào ô nhập email
+        return false;
+    }
+
+    // Kiểm tra mã sinh viên có 10 kí tự
     if (studentId.length !== 10 || !/^[a-zA-Z0-9]+$/.test(studentId)) {
-        alert("Mã sinh viên phải có đúng 10 kí tự và chỉ chứa chữ cái và số.");
+        alert("Mã sinh viên phải có đúng 10 kí tự và chỉ chứa chữ cái và số. Vui lòng nhập lại.");
+        document.getElementById("studentId").value = ""; // Xóa giá trị đã nhập
+        document.getElementById("studentId").focus(); // Đưa con trỏ vào ô nhập mã sinh viên
         return false;
     }
+
+    // Kiểm tra mật khẩu có đủ điều kiện
     if (password.length < 8 || !/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}/.test(password)) {
-        alert("Mật khẩu phải có ít nhất 8 kí tự và chứa ít nhất một chữ in hoa, một chữ thường, một số và một kí tự đặc biệt.");
+        alert("Mật khẩu phải có ít nhất 8 kí tự và chứa ít nhất một chữ in hoa, một chữ thường, một số và một kí tự đặc biệt. Vui lòng nhập lại.");
+        document.getElementById("registerPassword").value = ""; // Xóa giá trị đã nhập
+        document.getElementById("registerPassword").focus(); // Đưa con trỏ vào ô nhập mật khẩu
         return false;
     }
-    return false;
+
+    // Trả về true nếu không có lỗi
+    return true;
 }
+
 
 
 var registerForm = document.getElementById("registerForm");
