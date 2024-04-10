@@ -1,17 +1,34 @@
 var calculatorForm = document.getElementById("calculator");
 var dataEditorForm = document.getElementById("dataEditor");
+var infoForm = document.getElementById("info")
 var openCalculatorButton = document.getElementById("calculatorButton");
 var openDataEditorButton = document.getElementById("dataEditorButton");
+var openInfoButton = document.getElementById("infoButton")
 
 openCalculatorButton.addEventListener('click', function() {
     dataEditorForm.style.display = "none";
+    infoForm.style.display = "none";
     calculatorForm.style.display = "block";
+    document.querySelector('.footer').style.display = "none";
 });
 
 openDataEditorButton.addEventListener('click', function(){
     calculatorForm.style.display = "none";
-        dataEditorForm.style.display = "block";
+    infoForm.style.display = "none";
+    document.querySelector('.footer').style.display = "block";
+    dataEditorForm.style.display = "block";
 });
+
+openInfoButton.addEventListener('click', function(){
+    // document.getElementById('info').style.display = "block";
+    document.querySelector('.footer').style.display = "none";
+    // document.querySelector('.containerHome').style.display = "none";
+    calculatorForm.style.display = "none";
+    dataEditorForm.style.display = "none";
+    infoForm.style.display = "block";
+});
+
+
 function calculateCal1() {
     var hs1 = parseFloat(document.getElementById("heSo1ForCal1").value);
     var hs2 = parseFloat(document.getElementById("heSo2ForCal1").value);

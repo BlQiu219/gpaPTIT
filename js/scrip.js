@@ -66,7 +66,19 @@ function validateFormRe() {
     // Trả về true nếu không có lỗi
     return true;
 }
-
+// // Đăng ký một người dùng mới với email và mật khẩu
+// firebase.auth().createUserWithEmailAndPassword(email, password)
+//   .then((userCredential) => {
+//     // Đăng ký thành công, người dùng được đăng ký sẽ được trả về
+//     var user = userCredential.user;
+//     console.log("User registered:", user);
+//   })
+//   .catch((error) => {
+//     // Xử lý lỗi khi đăng ký
+//     var errorCode = error.code;
+//     var errorMessage = error.message;
+//     console.error("Registration error:", errorMessage);
+//   });
 
 
 var registerForm = document.getElementById("registerForm");
@@ -87,3 +99,27 @@ function showCourseSelection() {
 document.getElementById("submitCreateProfile").addEventListener("click", function(){
     window.location.href = "home.html";
 });
+
+
+
+let apiUser = "http://localhost:3000/user"
+
+function Login(){
+    getUsers(handleLogin);
+}
+
+function getUsers(callback){
+    fetch(apiUser).then(function(res){
+        return res.json().then(callback);
+    });
+}
+
+function handleLogin(data){
+    let loginEmail = document.getElementById("loginEmail").value;
+    let loginPassword = document.getElementById("loginPassword").value;
+    data.forEach(data => {
+        if(data.loginEmail == loginEmail && data.loginPassword == loginPassword){
+            alert("dang nhap thanh cong");
+        }
+    });
+}

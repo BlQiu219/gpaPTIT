@@ -13,7 +13,7 @@
         <div class="headerRight">
             <button class="buttonForm" id="calculatorButton">Công cụ tính</button>
             <button class="buttonForm" id="dataEditorButton">Chỉnh sửa</button>
-            <button class="buttonForm" id="statisticalButton">Thống kê</button>
+            <button class="buttonForm" id="infoButton">Giới thiệu</button>
             <button class="buttonForm" id="targetButton">Mục tiêu</button>
             <div class="infoUser">
                 <div style="text-align: center;"> user</div>
@@ -24,8 +24,24 @@
         
     </div>
 
-    <div class="containerHome" >
-        <div id="calculator" style="display: none;">
+    
+
+    <!-- <div id="containerHome"  style="display: block;"> -->
+        <div id="info" style="display: none; text-align: start; margin-left: 20px; justify-content: center; margin-top:30px">
+            <h2>Xin chào thầy,</h2>
+            <h3 style="font-size: 15px;">Em là sinh viên Nguyễn Thị Hoài Thu, mã sinh viên B21DCCN698, web gpaPTIT được em lấy cảm hứng từ web tính điểm GradePTIT của các anh chị khoá trên</h3>
+            <ul>Các tính năng chính của web 
+                <li>Lưu trữ bảng điểm của sinh viên Học viện Công nghệ Bưu chính Viễn thông </li>
+                <li>Tính điểm từng môn học</li>
+                <li>Import điểm </li>
+            </ul>
+            <ul>Thông tin cập nhật:
+                 <li>Ngày 8/4: Bổ sung cách tính điểm cho từng môn học, cập nhật các môn học từ chuyên ngành hệ thống thông tin, thêm phần giới thiệu môn học  </li>
+                 <li>Ngày 10/4: Sửa lại view Bảng điểm,</li>
+            </ul>
+
+        </div>
+        <div id="calculator" style="display: none; margin: 15% 15% 15% 15%">
             <div class="Cal">Công cụ tính</div>
             <div>
                 <select id="Cal-index" name="Cal-index" aria-placeholder="Hệ số điểm" onchange="showTable()">
@@ -70,7 +86,7 @@
             
         </div>
         
-        <div id="dataEditor" style="display: block;">
+        <div id="dataEditor" style="display: block ;">
             <h1 class="titleDataEditor">Bảng điểm của bạn</h1>
 
             <h2 class="titleDataEditorh2">Học kì 1 năm 1</h2>
@@ -1276,20 +1292,13 @@
                 </div>
             </div> 
         </div>
-    </div>
-
     <div class="footer">
-
-
-        <!-- <div class="footerLeft">
-                <div class="text" > Thông tin điểm tích luỹ </div>
-                <div class="text">Điểm trung bình tích luỹ</div>
-                <div class="text">Số tín chỉ tích luỹ </div>
-        </div> -->
-        <div class="footerRight">
+        <div class="centered-button">
             <button class="buttonForm" id="submitProfile">Lưu hồ sơ</button>
         </div>
     </div>
+
+    
     
     <script src="js/home.js"></script>
 </body>
