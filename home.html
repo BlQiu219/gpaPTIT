@@ -1299,7 +1299,46 @@
     </div>
 
     
+    <script>
+        // Hàm để lưu trữ dữ liệu bảng điểm vào Local Storage
+        function luuDuLieuBangDiem() {
+            var bangDiem = {};
+            document.querySelectorAll('.ki1-text').forEach(function(item) {
+                var monHoc = item.querySelector('.subk1-mh').textContent.trim();
+                var diem = parseFloat(item.querySelector('select').value);
+                bangDiem[monHoc] = diem;
+            });
+            localStorage.setItem('bangDiem', JSON.stringify(bangDiem));
+        }
     
+        // Hàm để tải dữ liệu bảng điểm từ Local Storage và cập nhật bảng điểm
+        function taiVaCapNhatBangDiem() {
+            var bangDiem = JSON.parse(localStorage.getItem('bangDiem'));
+            if (bangDiem) {
+                document.querySelectorAll('.ki1-text').forEach(function(item) {
+                    var monHoc = item.querySelector('.subk1-mh').textContent.trim();
+                    var selectElement = item.querySelector('select');
+                    if (bangDiem[monHoc]) {
+                        selectElement.value = bangDiem[monHoc].toString();
+                    }
+                });
+                calculateGPA1();
+            }
+        }
+    
+        // Gắn sự kiện cho nút "Lưu hồ sơ"
+        document.getElementById('submitProfile').addEventListener('click', function() {
+            luuDuLieuBangDiem();
+            taiVaCapNhatBangDiem();
+            alert('Đã lưu hồ sơ thành công!');
+        });
+    
+        // Gọi hàm để tải và cập nhật bảng điểm khi trang được tải
+        window.onload = function() {
+            taiVaCapNhatBangDiem();
+        };
+    </script>
+     
     <script src="js/home.js"></script>
 </body>
 </html>
