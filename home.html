@@ -15,16 +15,17 @@
             <button class="buttonForm" id="dataEditorButton">Chỉnh sửa</button>
             <button class="buttonForm" id="infoButton">Giới thiệu</button>
             <button class="buttonForm" id="targetButton">Mục tiêu</button>
-            <div class="infoUser">
-                <div style="text-align: center;"> user</div>
-                <div> B20DCCN001</div>
+            <div class="infoUser" id="infoUser">
+                <div style="text-align: center;">user</div>
+                <div>B20DCCN001</div>
             </div>
+            
             <img src="https://www.whoseno.com/images/user-icon.png" alt="">
         </div>
         
     </div>
 
-    
+    <button id="logoutButton" style="display: none;">Đăng xuất</button> 
 
     <!-- <div id="containerHome"  style="display: block;"> -->
         <div id="info" style="display: none; text-align: start; margin-left: 20px; justify-content: center; margin-top:30px">
@@ -33,11 +34,11 @@
             <ul>Các tính năng chính của web 
                 <li>Lưu trữ bảng điểm của sinh viên Học viện Công nghệ Bưu chính Viễn thông </li>
                 <li>Tính điểm từng môn học</li>
-                <li>Import điểm </li>
+                <li>Nhập điểm </li>
             </ul>
             <ul>Thông tin cập nhật:
                  <li>Ngày 8/4: Bổ sung cách tính điểm cho từng môn học, cập nhật các môn học từ chuyên ngành hệ thống thông tin, thêm phần giới thiệu môn học  </li>
-                 <li>Ngày 10/4: Sửa lại view Bảng điểm,</li>
+                 <li>Ngày 10/4: Sửa lại view Bảng điểm, thêm nút đăng xuất, cập nhật lưu trữ dữ liệu bảng điểm </li>
             </ul>
 
         </div>
@@ -1300,7 +1301,7 @@
 
     
     <script>
-        // Hàm để lưu trữ dữ liệu bảng điểm vào Local Storage
+        // lưu trữ dữ liệu 
         function luuDuLieuBangDiem() {
             var bangDiem = {};
             document.querySelectorAll('.ki1-text').forEach(function(item) {
@@ -1311,7 +1312,7 @@
             localStorage.setItem('bangDiem', JSON.stringify(bangDiem));
         }
     
-        // Hàm để tải dữ liệu bảng điểm từ Local Storage và cập nhật bảng điểm
+        // tải dữ liệu và cập nhật bảng điểm
         function taiVaCapNhatBangDiem() {
             var bangDiem = JSON.parse(localStorage.getItem('bangDiem'));
             if (bangDiem) {
@@ -1326,17 +1327,17 @@
             }
         }
     
-        // Gắn sự kiện cho nút "Lưu hồ sơ"
+        // Gán
         document.getElementById('submitProfile').addEventListener('click', function() {
             luuDuLieuBangDiem();
             taiVaCapNhatBangDiem();
             alert('Đã lưu hồ sơ thành công!');
         });
     
-        // Gọi hàm để tải và cập nhật bảng điểm khi trang được tải
+        // view 
         window.onload = function() {
             taiVaCapNhatBangDiem();
-        };
+        }; 
     </script>
      
     <script src="js/home.js"></script>

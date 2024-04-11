@@ -372,3 +372,15 @@ function calculateGPA52() {
     document.getElementById('totalCredits52').textContent = totalCredits52 + parseFloat(document.getElementById('totalCredits5').textContent);
 }
 
+var infoUser = document.getElementById('infoUser');
+var logoutButton = document.getElementById('logoutButton');
+
+infoUser.addEventListener('click', function() {
+    logoutButton.style.display = 'block';
+});
+
+logoutButton.addEventListener('click', function() {
+    localStorage.removeItem('loggedInUser');
+    alert('Bạn đã đăng xuất thành công!');
+    window.location.href = 'index.html';
+});

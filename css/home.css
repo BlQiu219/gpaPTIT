@@ -37,6 +37,18 @@
     color: white;
 }
 
+#logoutButton {
+    position: fixed; 
+    top: 70px;
+    right: 20px;
+    font-size: 15px;
+    border-radius: 15px;
+    background-color: #C90505;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
 img {
     width: 45px;
     height: 45px;
